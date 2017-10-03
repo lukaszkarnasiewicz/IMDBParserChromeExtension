@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Filmy IMDB Chrome Extension",
+  "description": "This extension gets movie info from an IMDB page and stores it in clipboard",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.imdb.com/title/*/combined"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
